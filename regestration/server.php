@@ -1,4 +1,5 @@
 <?php
+  
    $username = "";
    $email = "";
    $errors = array();
