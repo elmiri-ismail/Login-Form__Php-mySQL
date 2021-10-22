@@ -41,8 +41,8 @@ exit();
 }
 
 // log user in from login page 
-  if (isset($_POST['login'])){
-    if (isset($_POST['register'])) {
+  
+    if (isset($_POST['login'])) {
         $username = ($_POST['username']);
 
         $password = ($_POST['password']);
@@ -70,7 +70,7 @@ header('location:/index.php'); //redirect to home page
     }
 
   }
-}
+
 
 //Logout
 if (isset($_GET['logout'])){
