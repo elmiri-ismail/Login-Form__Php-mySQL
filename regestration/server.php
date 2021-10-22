@@ -53,7 +53,7 @@ exit();
     if (empty($password)) {
         array_push($errors ,"password is required");
     }
-    if (count($errors)==0) {
+    if (count($errors) == 0) {
      $password = md5($password); //encrypt password before comparing with that from database
      $query = "SELECT * FROM users WHERE username='$username' AND password= '$password' ";
      $result = mysqli_query($db , $query);
@@ -65,6 +65,7 @@ header('location:/index.php'); //redirect to home page
 
      }else {
          array_push($errors , "wrong username/password combination");
+         header('location: login.php');
      }
     }
 
